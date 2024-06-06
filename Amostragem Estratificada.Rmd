@@ -1,0 +1,13 @@
+---
+Amostragem Estratificada
+---
+```{r}
+install.packages("sampling")
+library("sampling)
+```
+
+```{r}
+propocao = 25
+```
+
+sr
