@@ -1,0 +1,36 @@
+---
+title: 'testes de Normalidade'
+output: html_document
+date: "2024-06-13"
+---
+repetir o experimento
+```{r}
+set.seed(123)
+```
+Gera  mil variáveis normalmente distribuidas 
+```{r}
+x = rnorm(1000)
+
+```
+
+Gráfico QQ
+```{r}
+#rodar com ctrt+shift+enter
+qqnorm(x)
+#linha
+qqline(x)
+```                                                            
+
+teste de shapiro
+valor de p acima de 0,05, não há indicio  para a não confirmar a hipótese nula de dados normalmente distribuidos
+```{r}
+shapiro.test(x)
+```
+
+Histograma com linha de densidade
+
+```{r}
+hist(x,main="")
+par(new=TRUE)
+plot(density(x),ylab="", xlab = "",axes=F, lwd=2.5)
+```
