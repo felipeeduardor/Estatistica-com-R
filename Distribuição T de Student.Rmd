@@ -1,0 +1,21 @@
+---
+Distribuição T de Student
+---
+Salario de um professor 75 por hora. Amostra 9. S=10, qual a probabilidade de ser menor que 80 hora?
+t=1.5 graus de liberdade
+```{r}
+pt(1.5,8)
+```
+qual a probabilidade  de ser menor que 80
+
+```{r}
+pt(1.5,8,lower.tail = F)
+1- pt(1.5,8)
+```
+somando as 2 caudas
+
+```{r}
+pt(1.5,8) + pt(1,5,8,lower.tail = F)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
