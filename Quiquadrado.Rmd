@@ -1,0 +1,32 @@
+---
+Quiquadrado
+
+criamos o conjunto de dados para teste
+---
+
+```{r}
+novela = matrix(c(19,6,43,32),nrow = 2,byrow = T)
+rownames(novela) = c("Masculino","Feminino")
+colnames(novela) = c("Assiste","NãoAssiste")
+novela
+```
+
+## R Markdown
+Executar quiquadrado
+valor de p é maior que 0,05 não há evidencias de diferença significativa (hipótese nula)
+
+```{r}
+chisq.test(novela)
+
+```
+
+## 
+alteramos a proporção de homens que assiste e não Executamos o teste novamente, agora valor de p menor que 0,05
+
+```{r}
+novela = matrix(c(22,3,43,32),nrow = 2, byrow = T)
+rownames(novela) = c("Masculino","NãoAssiste")
+novela
+chisq.test(novela)
+```
+
